@@ -20,13 +20,13 @@
 <script type="text/javascript">
  $(function () {
    $.getScript('#CHEMIN{prive/javascript/ui/jquery.ui.datepicker.js}', function () {
-     $.getScript('#CHEMIN{javascript/jquery-ui.multidatespicker.js}',function(){
+     $.getScript('#CHEMIN{javascript/jquery-ui.multidatespicker.js}', function () {
        var multidate_picker_options = {altField: '##ENV{nom}'};
        /**
-	* Multidatepicker n'aime pas un array vide apparemment
-	*/
+		* Multidatepicker n'aime pas un array vide apparemment
+		*/
        if($('##ENV{nom}').val() != "") {
-	 multidate_picker_options.addDates = $('##ENV{nom}').val().split(',');
+		   multidate_picker_options.addDates = $('##ENV{nom}').val().split(',');
        }
 
        // une seule fois;
