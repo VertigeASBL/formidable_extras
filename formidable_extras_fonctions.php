@@ -49,3 +49,18 @@ function detailler_listes ($listes) {
         return FALSE;
     }
 }
+
+/**
+ * Normaliser la liste des dates d'une saisie multidate
+ *
+ * @param string $dates
+ * @access public
+ * @return array
+ */
+function traiter_saisies_multidate($dates) {
+
+	$dates = explode(',', $dates);
+	$dates = array_map('normaliser_date', $dates);
+
+	return $dates;
+}
